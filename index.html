@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lothi Safaris · Serengeti luxury redefined</title>
+  <!-- Google Fonts for refined typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free) for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0b0e0a;
+      color: #f3efe7;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ---------- DESIGN TOKENS ---------- */
+    :root {
+      --sand: #d9c8b2;
+      --gold: #c9a87c;
+      --deep-forest: #16211a;
+      --charcoal: #1e241f;
+      --warm-dark: #0b0e0a;
+      --off-white: #f3efe7;
+      --muted-moss: #6a7a6b;
+      --sunset: #b87c4b;
+    }
+
+    /* ---------- HEADER / NAV ---------- */
+    .site-header {
+      padding: 1.8rem 0;
+      border-bottom: 1px solid rgba(201, 168, 124, 0.15);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .logo span {
+      font-weight: 300;
+      color: var(--off-white);
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 400;
+    }
+
+    .nav-links a {
+      color: var(--off-white);
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      border-bottom-color: var(--gold);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--gold);
+      padding: 0.7rem 1.5rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 500;
+      transition: all 0.25s;
+      cursor: default;
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--warm-dark);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      padding: 6rem 0 5rem;
+      background: linear-gradient(145deg, #0b0e0a 0%, #1a1f17 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 70%;
+      height: 140%;
+      background: radial-gradient(circle at 70% 40%, rgba(201, 168, 124, 0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-tagline {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.2rem, 8vw, 5.8rem);
+      line-height: 1.05;
+      font-weight: 500;
+      margin-bottom: 1.8rem;
+      color: #fcf9f2;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      max-width: 650px;
+      color: #d4cfc4;
+      margin-bottom: 2.8rem;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      border: none;
+      color: #0b0e0a;
+      padding: 1rem 2.5rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      transition: background 0.25s;
+      cursor: default;
+    }
+
+    .btn-primary:hover {
+      background: #dbb88a;
+    }
+
+    /* ---------- SECTION HEADERS ---------- */
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      color: #f3efe7;
+    }
+
+    .section-intro {
+      font-size: 1.1rem;
+      color: #b9b3a6;
+      max-width: 720px;
+      font-weight: 300;
+    }
+
+    /* ---------- DESTINATION CARDS (horizontal scroll / grid) ---------- */
+    .destinations {
+      padding: 6rem 0 4rem;
+    }
+
+    .destinations-grid {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+
+    .dest-card {
+      flex: 1 1 220px;
+      background: #141a14;
+      border: 1px solid rgba(201, 168, 124, 0.15);
+      padding: 2rem 1.5rem;
+      transition: all 0.2s;
+    }
+
+    .dest-card:hover {
+      border-color: rgba(201, 168, 124, 0.4);
+      background: #1a221b;
+    }
+
+    .dest-card .region {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .dest-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .dest-card .nickname {
+      font-style: italic;
+      color: var(--sand);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+
+    .dest-card p {
+      font-size: 0.9rem;
+      color: #b9b3a6;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .dest-card .perks {
+      list-style: none;
+      font-size: 0.8rem;
+      color: #ccc6b8;
+    }
+
+    .dest-card .perks li {
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .dest-card .perks i {
+      color: var(--gold);
+      font-size: 0.6rem;
+    }
+
+    /* ---------- JOURNEYS (BESPOKE ITINERARIES) ---------- */
+    .journeys {
+      padding: 5rem 0;
+      background: #0f130f;
+    }
+
+    .journeys-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .journey-card {
+      background: #141a14;
+      border: 1px solid #2a332a;
+      padding: 2rem 1.8rem 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: border 0.2s;
+    }
+
+    .journey-card:hover {
+      border-color: #c9a87c;
+    }
+
+    .journey-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .journey-card h3 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+
+    .journey-card p {
+      font-size: 0.95rem;
+      color: #b9b3a6;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .journey-features {
+      list-style: none;
+      margin: 1.2rem 0 1.8rem;
+      flex-grow: 1;
+    }
+
+    .journey-features li {
+      font-size: 0.85rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: #d4cfc4;
+    }
+
+    .journey-features i {
+      color: var(--gold);
+      width: 1.1rem;
+      font-size: 0.75rem;
+    }
+
+    .journey-price {
+      border-top: 1px solid #2a332a;
+      padding-top: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8f9a8f;
+    }
+
+    .price-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    /* ---------- WHY US ---------- */
+    .why-us {
+      padding: 6rem 0;
+      background: #0b0e0a;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .why-item h4 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+      color: #f3efe7;
+    }
+
+    .why-item p {
+      font-size: 0.95rem;
+      color: #b0aa9e;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .why-icon {
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    /* ---------- GALLERY (CINEMATIC) ---------- */
+    .gallery {
+      padding: 5rem 0;
+      background: #0f130f;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 1 / 1.1;
+      background: #1e241f;
+      border: 1px solid #2f3a2f;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      transition: all 0.25s;
+    }
+
+    .gallery-item:hover {
+      border-color: var(--gold);
+      background: #1f281f;
+    }
+
+    .gallery-category {
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+    }
+
+    .gallery-item h4 {
+      font-size: 1.7rem;
+      font-weight: 500;
+      line-height: 1.2;
+      color: #f3efe7;
+    }
+
+    /* ---------- TESTIMONIAL ---------- */
+    .testimonial {
+      padding: 5rem 0;
+      background: #0b0e0a;
+      text-align: center;
+    }
+
+    .testimonial blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.4;
+      max-width: 980px;
+      margin: 2rem auto;
+      color: #f3efe7;
+    }
+
+    .testimonial-author {
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 1.5rem;
+    }
+
+    .testimonial-author span {
+      color: #b9b3a6;
+      font-weight: 300;
+      text-transform: none;
+      letter-spacing: 0.05em;
+      margin-left: 0.5rem;
+    }
+
+    /* ---------- ROOTED CODES / ABOUT ---------- */
+    .about {
+      padding: 6rem 0;
+      background: #0f130f;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .about-text p {
+      font-size: 1.05rem;
+      color: #b9b3a6;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .stat-item h5 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .stat-item p {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8f9a8f;
+    }
+
+    .about-highlight {
+      border-left: 2px solid var(--gold);
+      padding-left: 1.8rem;
+    }
+
+    .about-highlight p {
+      font-style: italic;
+      font-size: 1.3rem;
+      color: #ded9cf;
+      font-weight: 300;
+    }
+
+    /* ---------- CTA / CONTACT ---------- */
+    .cta {
+      padding: 6rem 0 5rem;
+      background: #0b0e0a;
+      border-top: 1px solid rgba(201, 168, 124, 0.1);
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+    }
+
+    .cta h2 {
+      font-size: 3.2rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta p {
+      color: #b9b3a6;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1.8rem;
+      font-size: 0.95rem;
+      color: #ccc6b8;
+      flex-wrap: wrap;
+    }
+
+    .contact-row i {
+      color: var(--gold);
+      width: 1.5rem;
+    }
+
+    .contact-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8f9a8f;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      padding: 2.5rem 0;
+      border-top: 1px solid rgba(201, 168, 124, 0.1);
+      font-size: 0.8rem;
+      color: #7e8a7e;
+      text-align: center;
+      letter-spacing: 0.1em;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .about-grid,
+      .cta-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+      .header-inner {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-title {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .container {
+        padding: 0 1.2rem;
+      }
+      .destinations-grid {
+        flex-direction: column;
+      }
+      .testimonial blockquote {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* subtle decorative */
+    .gold-dot {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+      margin-right: 0.7rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">LOTHI <span>SAFARIS</span></a>
+      <nav class="nav-links">
+        <a href="#">Expeditions</a>
+        <a href="#">Sanctuaries</a>
+        <a href="#">Heritage</a>
+        <a href="#">Journal</a>
+        <div class="btn-outline" style="cursor: default;">Private enquiry</div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-tagline">ESTABLISHED IN THE HEARTLAND OF TANZANIA</div>
+        <h1>Where the Serengeti <em>Meets the Sunset</em></h1>
+        <p>Luxury wildlife journeys crafted beneath the golden skies of Africa. Embark on custom-tailored expeditions with Tanzanian heritage guides.</p>
+        <div class="hero-actions">
+          <div class="btn-primary" style="cursor: default;">Begin your journey</div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; color: #c9a87c; font-size: 0.85rem; letter-spacing: 0.1em;">
+            <i class="fas fa-arrow-right"></i> <span style="border-bottom: 1px solid rgba(201,168,124,0.4);">Watch the film</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS / SANCTUARIES -->
+    <section class="destinations">
+      <div class="container">
+        <div class="section-label">TANZANIA'S JEWELS</div>
+        <h2 class="section-title">Incomparable Sanctuaries</h2>
+        <p class="section-intro">From endless grassy horizons to ancient volcanic floors and pristine turquoise coastlines, we guide your gaze through absolute wilderness.</p>
+
+        <div class="destinations-grid">
+          <div class="dest-card">
+            <div class="region">Tanzania · East Africa</div>
+            <h3>Serengeti National Park</h3>
+            <div class="nickname">"The Ultimate Wilderness"</div>
+            <p>An ancient, endless landscape where light paints the dry grasslands in spectacular copper and gold. Witness the thundering heartbeat of wild Africa.</p>
+            <ul class="perks">
+              <li><i class="fas fa-circle"></i> Great Migration crossing</li>
+              <li><i class="fas fa-circle"></i> Lion prides on kopjes</li>
+              <li><i class="fas fa-circle"></i> Hot air balloon safaris</li>
+            </ul>
+          </div>
+          <div class="dest-card">
+            <div class="region">Ngorongoro</div>
+            <h3>Ngorongoro Crater</h3>
+            <div class="nickname">The Volcanic Sanctuary</div>
+            <p>A UNESCO wonder cradling an incredible density of wildlife within its ancient caldera walls.</p>
+            <ul class="perks">
+              <li><i class="fas fa-circle"></i> Black rhino sightings</li>
+              <li><i class="fas fa-circle"></i> Rim-view champagne breakfast</li>
+            </ul>
+          </div>
+          <div class="dest-card">
+            <div class="region">Tarangire</div>
+            <h3>Tarangire National Park</h3>
+            <div class="nickname">The Land of Giants</div>
+            <p>Baobab studded plains and massive elephant herds gathering along the Tarangire River.</p>
+            <ul class="perks">
+              <li><i class="fas fa-circle"></i> Giant baobab landscapes</li>
+              <li><i class="fas fa-circle"></i> Exclusive walking safaris</li>
+            </ul>
+          </div>
+          <div class="dest-card">
+            <div class="region">Lake Manyara</div>
+            <h3>Lake Manyara</h3>
+            <div class="nickname">The Shimmering Haven</div>
+            <p>Flamingo-lined shores, tree-climbing lions and a lush groundwater forest.</p>
+            <ul class="perks">
+              <li><i class="fas fa-circle"></i> Pink flamingo horizons</li>
+              <li><i class="fas fa-circle"></i> Canoe & cycle adventures</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BESPOKE JOURNEYS -->
+    <section class="journeys">
+      <div class="container">
+        <div class="section-label">LIMITED RESERVATIONS</div>
+        <h2 class="section-title">Bespoke Journeys</h2>
+        <p class="section-intro">Curated, all-inclusive luxury itineraries blending raw Tanzanian beauty with uncompromised five-star glamping hospitality.</p>
+
+        <div class="journeys-grid">
+          <!-- 1 -->
+          <div class="journey-card">
+            <div class="journey-meta"><span>10 Days / 9 Nights</span> <span>Chasing the Thundering Hooves</span></div>
+            <h3>The Great Migration Odyssey</h3>
+            <p>Follow the millions of wildebeest and zebras on their perilous migration. Cross iconic rivers, gaze at raw river crossing actions, and enjoy ultra-luxury mobile camps matching the herds’ coordinates.</p>
+            <ul class="journey-features">
+              <li><i class="fas fa-check"></i> Priority river crossing drives</li>
+              <li><i class="fas fa-check"></i> Luxury mobile campsite tracking</li>
+              <li><i class="fas fa-check"></i> All-inclusive premium transfers</li>
+            </ul>
+            <div class="journey-price">
+              <span class="price-label">Luxury double sharing</span>
+              <span class="price-value">From $11,500</span>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="journey-card">
+            <div class="journey-meta"><span>8 Days / 7 Nights</span> <span>Love Under the African Sky</span></div>
+            <h3>Romantic Savannah Sunset Escape</h3>
+            <p>Unwind in the ultimate intimate hideaway. Experience private candlelit lanterns on wooden viewing decks, couples massages overlooking savannah horizons, and absolute seclusion under the stars.</p>
+            <ul class="journey-features">
+              <li><i class="fas fa-check"></i> Private lantern-lit deck dinners</li>
+              <li><i class="fas fa-check"></i> Scenic charter flights included</li>
+              <li><i class="fas fa-check"></i> Infinity view private plunge pools</li>
+            </ul>
+            <div class="journey-price">
+              <span class="price-label">Luxury double sharing</span>
+              <span class="price-value">From $13,200</span>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="journey-card">
+            <div class="journey-meta"><span>7 Days / 6 Nights</span> <span>Pure Wilderness Tracker</span></div>
+            <h3>Acacia Apex: Big Five Expedition</h3>
+            <p>A masterclass tracking expedition. With expert local guides and custom open-side 4x4 vehicles, we locate lions, leopards, rhinos, elephants, and buffalos nestled deep in their natural routines.</p>
+            <ul class="journey-features">
+              <li><i class="fas fa-check"></i> Exclusive private jeep and tracker</li>
+              <li><i class="fas fa-check"></i> Off-road tracking permits</li>
+              <li><i class="fas fa-check"></i> High-end lodge accommodations</li>
+            </ul>
+            <div class="journey-price">
+              <span class="price-label">Luxury double sharing</span>
+              <span class="price-value">From $9,800</span>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="journey-card">
+            <div class="journey-meta"><span>9 Days / 8 Nights</span> <span>Connecting Across Generations</span></div>
+            <h3>Savannah Roots: Elite Family Journey</h3>
+            <p>Crafted with multi-generational explorers in mind. Engage in interactive animal tracking school with Maasai educators, gentle bush walks, and rich storytelling around custom-built family fire pits.</p>
+            <ul class="journey-features">
+              <li><i class="fas fa-check"></i> Maasai tracking academy for children</li>
+              <li><i class="fas fa-check"></i> Luxury multi-suite family villas</li>
+              <li><i class="fas fa-check"></i> Flexible, child-friendly scheduling</li>
+            </ul>
+            <div class="journey-price">
+              <span class="price-label">Luxury double sharing</span>
+              <span class="price-value">From $12,400</span>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="journey-card">
+            <div class="journey-meta"><span>8 Days / 7 Nights</span> <span>Painting with Serengeti Sunset Light</span></div>
+            <h3>Twilight & Gold: Photographic Masterclass</h3>
+            <p>A dedicated photographic quest led by an award-winning wildlife documentarian. Featuring custom safari vehicles with 360° swivel camera mounts, beanbags, stable platforms, and early-access park entries.</p>
+            <ul class="journey-features">
+              <li><i class="fas fa-check"></i> Award-winning photographer lead</li>
+              <li><i class="fas fa-check"></i> Specially adapted swivel-mount vehicles</li>
+              <li><i class="fas fa-check"></i> Golden-hour priority locations</li>
+            </ul>
+            <div class="journey-price">
+              <span class="price-label">Luxury double sharing</span>
+              <span class="price-value">From $10,900</span>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div class="journey-card">
+            <div class="journey-meta"><span>6 Days / 5 Nights</span> <span>Eden Within Volcanic Walls</span></div>
+            <h3>Caldera Sovereign: Ngorongoro Signature</h3>
+            <p>An elite exploration of the world’s largest intact volcanic caldera. Experience private early-morning rim-view champagne breakfasts, exclusive crater floor safaris, and high-end sanctuary suites suspended above the clouds.</p>
+            <ul class="journey-features">
+              <li><i class="fas fa-check"></i> Private sunrise caldera descent</li>
+              <li><i class="fas fa-check"></i> Acreage-wide luxury rim suites</li>
+              <li><i class="fas fa-check"></i> Rare black rhino tracking permits</li>
+            </ul>
+            <div class="journey-price">
+              <span class="price-label">Luxury double sharing</span>
+              <span class="price-value">From $8,900</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why-us">
+      <div class="container">
+        <div class="section-label">UNRIVALED SAFARI HERITAGE</div>
+        <h2 class="section-title">Why Our Heart Beats for the Serengeti</h2>
+        <p class="section-intro">We do not just curate travels. We cultivate deeply emotional encounters, honoring Tanzanian soil and connecting you to pristine African wilderness at its rawest hours.</p>
+
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="why-icon"><i class="fas fa-feather-alt"></i></div>
+            <h4>Elite Born-to-the-Land Guides</h4>
+            <p>Our indigenous guides possess an innate, lifelong understanding of local tracks and species behavior, giving you rare close-up experiences.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><i class="fas fa-campground"></i></div>
+            <h4>Bespoke Luxury Glamping</h4>
+            <p>Stay in private, eco-certified high-end lodges featuring canvas layouts, custom infinity pools, open-air baths, and pristine butler services.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><i class="fas fa-compass"></i></div>
+            <h4>Fully Tailored Itineraries</h4>
+            <p>Every trail, meal, and flight matches your speed. Create customized itineraries designed to exceed your visual and comfort expectations.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+            <h4>Decades of Conservation Care</h4>
+            <p>We prioritize wildlife conservation, partnering with local communities to support anti-poaching and low-impact sustainable luxury tourism.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><i class="fas fa-concierge-bell"></i></div>
+            <h4>24/7 Red-Carpet Concierge</h4>
+            <p>From your first digital request to your return flight, our private guest operations team ensures bulletproof travel comfort.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><i class="fas fa-hand-sparkles"></i></div>
+            <h4>True Cultural Resonance</h4>
+            <p>Participate in meaningful, respectful, non-commercialized exchanges with Maasai elders and community leaders.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery">
+      <div class="container">
+        <div class="section-label">CINEMATIC VISUAL CHRONICLES</div>
+        <h2 class="section-title">The Savannah Gallery</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <div class="gallery-category">Wildlife</div>
+            <h4>Golden Pride Resting</h4>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-category">Adventure</div>
+            <h4>Serengeti Dusk Caravan</h4>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-category">Landscape</div>
+            <h4>Baobab Twilight Haze</h4>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-category">Landscape</div>
+            <h4>Soda Lake Pink Horizon</h4>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-category">Culture</div>
+            <h4>Maasai Wisdom of the Sun</h4>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-category">Luxury Camps</div>
+            <h4>Unparalleled Glamping deck</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section class="testimonial">
+      <div class="container">
+        <div class="section-label">SOULS MET ON TANZANIAN SOIL</div>
+        <h2 class="section-title" style="margin-bottom: 0;">Whispers of the Wind</h2>
+        <blockquote>“Our honeymoon with Lothi Safaris was a dream materialized. From sunset champagne on the savannah to our private lantern-lit decks, everything was curated with exquisite elegance and deep love.”</blockquote>
+        <div class="testimonial-author">Hance & Modesta <span>— Kilimanjaro, Tanzania</span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT / ROOTED CODES -->
+    <section class="about">
+      <div class="container">
+        <div class="section-label">OUR ROOTED CODES</div>
+        <h2 class="section-title" style="margin-bottom: 2rem;">Crafted in the Soil of Tanzania</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>Founded on the dust of the Serengeti, Lothi Safaris was born to preserve the sacred connection between human curiosity and African wild frontiers. We are not external tour coordinators — we are a locally owned and rooted collective of naturalists, trackers, and conservationists.</p>
+            <p>For us, "luxury" is not about separating you from the environment, but immersing you in it with unparalleled comfort. We take you to precise places where roaring lions greet the sunset, and ancient baobabs offer silent, twilight shade.</p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <h5>3%</h5>
+                <p>Conservation first</p>
+              </div>
+              <div class="stat-item">
+                <h5>100%</h5>
+                <p>Local trackers</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <p>“Tanzania in its truest, most dignified light.”</p>
+            <div style="margin-top: 2rem; font-size: 0.9rem; color: #b9b3a6;">
+              <p><i class="fas fa-leaf" style="color: var(--gold); margin-right: 0.8rem;"></i> 3% of all safari revenues directly support active anti-poaching and school setups in Maasai villages.</p>
+              <p style="margin-top: 1rem;"><i class="fas fa-handshake" style="color: var(--gold); margin-right: 0.8rem;"></i> We only work with certified local trackers whose families have protected the savannah for generations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTACT -->
+    <section class="cta">
+      <div class="container cta-grid">
+        <div>
+          <div class="section-label">SECURE AN INVITATION</div>
+          <h2>Initiate Your Expedition</h2>
+          <p>Every Lothi Safaris voyage starts with a private dialogue. Share your desired horizons, timing, and pacing coordinates. Our luxury travel consultants will design a custom safari blueprint aligned perfectly to your rhythm.</p>
+        </div>
+        <div>
+          <div class="contact-row">
+            <i class="fas fa-envelope"></i>
+            <div><span class="contact-label">DIRECT PRIVATE OFFICE</span> heisbryson@gmail.com</div>
+          </div>
+          <div class="contact-row">
+            <i class="fab fa-whatsapp"></i>
+            <div><span class="contact-label">CONSULTATION WHATSAPP</span> +255 (745) 606-257</div>
+          </div>
+          <div style="margin-top: 2.5rem; font-size: 0.8rem; color: #8f9a8f; letter-spacing: 0.1em;">
+            <i class="fas fa-location-dot" style="color: var(--gold);"></i> SERENGETI · NGORONGORO · TARANGIRE · MANYARA
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 LOTHI SAFARIS · TANZANIA · ALL RIGHTS RESERVED · DESIGNED FOR THE WILD</p>
+    </div>
+  </footer>
+</body>
+</html>
